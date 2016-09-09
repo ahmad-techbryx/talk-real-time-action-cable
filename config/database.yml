@@ -1,0 +1,24 @@
+
+#  local development. Do not deploy.
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 27
+
+development:
+  <<: *default
+  database: talk_real_time_action_cable_development
+  username: postgres
+  password: 1122
+  host: localhost
+  port: 5432
+  pool: 27
+test:
+  <<: *default
+  database: talk_real_time_action_cable_test
+  username: postgres
+  password: 1122
+  host: localhost
+  port: 5432
+
